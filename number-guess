@@ -1,0 +1,51 @@
+#!/bin/bash
+clear
+echo 'Please enter your name.'
+read -p '> ' n
+echo 'Welcome, '$n'.  Please guess a number from 1 to 100.'
+read -p '> ' x
+number=$(echo $(( $RANDOM % 100 + 1 )))
+
+while [[ $x -ne $number ]]
+do
+
+if [[ $x -gt $number  && $x -le 100 ]]; then
+  echo 'Too high.  Try again.'
+  read -p '> ' x
+fi
+
+if [[ $x -lt $number && $x -ge 1 ]]; then
+  echo 'Too low.  Try again.'
+  read -p '> ' x
+fi
+
+if [[ $x -lt 1 ]]; then
+  echo 'That is less than 1.  Try again.'
+  read -p '> ' x
+fi
+
+if [[ $x -gt 100 ]]; then
+  echo 'That is more than 100.  Try again.'
+  read -p '> ' x
+fi
+
+done
+
+if [[ $x -eq $number ]]; then
+  echo 'You won!'
+  read -p 'Would you like to to play again? [Y/n]: ' t
+fi
+
+if [[ ($t == n || $t == N) ]]; then
+echo 'Bye, '$n'!'
+sleep 0.5s
+exit 0
+fi
+
+if [[ $t == y || $t == Y ]]; then
+exec bash "$0" "$@"
+fi
+
+if [[ $x == quit ]]; then
+	echo 'Bye!'
+fi
