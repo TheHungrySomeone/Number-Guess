@@ -1,11 +1,16 @@
 #!/bin/bash
 clear
-echo 'Please enter your name.'
+
+# Asks the user for a nickname, and starts the game by asking the user to enter the number
+echo 'Please enter a nickname.'
 read -p '> ' n
 echo 'Welcome, '$n'.  Please guess a number from 1 to 100.'
 read -p '> ' x
+
+# Chooses a random number so the user doesn't have to edit it manually
 number=$(echo $(( $RANDOM % 100 + 1 )))
 
+# All of this is for the computer to know if it's too high or too low.  This ends when the user picks the right number.
 while [[ $x -ne $number ]]
 do
 
@@ -31,10 +36,12 @@ fi
 
 done
 
+# This is to end the game, and it asks if the user want's to play again.
 if [[ $x -eq $number ]]; then
   echo 'You won!'
   read -p 'Would you like to to play again? [Y/n]: ' t
 fi
+
 
 if [[ ($t == n || $t == N) ]]; then
 echo 'Bye, '$n'!'
@@ -44,8 +51,4 @@ fi
 
 if [[ $t == y || $t == Y ]]; then
 exec bash "$0" "$@"
-fi
-
-if [[ $x == quit ]]; then
-	echo 'Bye!'
 fi
