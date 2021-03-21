@@ -4,6 +4,7 @@ clear
 # Asks the user for a nickname, and starts the game by asking the user to enter the number
 echo 'Please enter a nickname.'
 read -p '> ' n
+#echo $n >> /home/number/names.txt
 echo 'Welcome, '$n'.  Please guess a number from 1 to 100.'
 read -p '> ' x
 
