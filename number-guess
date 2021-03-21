@@ -4,7 +4,10 @@ clear
 # Asks the user for a nickname, and starts the game by asking the user to enter the number
 echo 'Please enter a nickname.'
 read -p '> ' n
+
+# Uncomment the line below to log the nicknames people enter, but only do this after folowing the directions for this on the readme (https://github.com/TheHungrySomeone/Number-Guess/blob/main/README.md).
 #echo $n >> /home/number/names.txt
+
 echo 'Welcome, '$n'.  Please guess a number from 1 to 100.'
 read -p '> ' x
 
