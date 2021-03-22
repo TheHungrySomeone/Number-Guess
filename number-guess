@@ -48,7 +48,7 @@ fi
 
 
 if [[ ($t == n || $t == N) ]]; then
-echo 'Bye, '$n'!'
+echo 'Bye, '$n'!  Come back soon!'
 sleep 0.5s
 exit 0
 fi
