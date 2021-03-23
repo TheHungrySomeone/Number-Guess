@@ -1,5 +1,5 @@
 # Number-Guess Game
-This is a very simple number guessing game.  I know I'm not the best coder, but I'm going to try to improve this game. Am I really in a different branch?
+This is a very simple number guessing game.
 ## Dependencies
 * Bash
 
