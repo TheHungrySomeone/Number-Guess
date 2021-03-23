@@ -1,5 +1,5 @@
 # Number-Guess Game
-This is a very simple number guessing game.
+This is a very simple number guessing game.  It asks for a nickname, asks you to guess a number, tells you if you're number is too high or to low, then tells you if you won.
 ## Dependencies
 * Bash
 
