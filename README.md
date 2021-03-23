@@ -4,7 +4,7 @@ This is a very simple number guessing game.  I know I'm not the best coder, but 
 * Bash
 
 ## How to install
-cd into the `number-guess` directory, then copy `number-guess` into a directory in your $PATH such as /usr/local/bin or /usr/bin.  You can run this by running the command `number-guess`.
+cd into the `number-guess` directory (or `Number-Guess`, if you cloned this project using git), then copy `number-guess` into a directory in your $PATH such as /usr/local/bin or /usr/bin, then you can run this by running the command `number-guess`.
 
 ## Install on an ssh server
 1. Follow the directions above
