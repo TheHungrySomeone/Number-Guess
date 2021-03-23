@@ -42,7 +42,7 @@ done
 
 # This is to end the game, and it asks if the user want's to play again.
 if [[ $x -eq $number ]]; then
-  echo 'You won!'
+  echo 'YOU WON!!!'
   read -p 'Would you like to to play again? [Y/n]: ' t
 fi
 
