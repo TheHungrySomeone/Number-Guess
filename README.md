@@ -22,6 +22,6 @@ but replace "hostname" with your computer's ip address (found with `hostname -I`
 ## Log the Nicknames People Enter
 If you want the game to automatically log the nicknames people enter, create an empty file named `names.txt` in /home/number, then uncomment the line that says ` echo $n >> /home/number/names.txt`
 ## Play without installing
-If you don't want to install number guess but still want to play, cd into the `number-guess` directory, then run `./number-guess`.
+If you don't want to install number guess but still want to play, cd into your number-guess directory, then run `./number-guess`.
 ## Done
 This was how to install the game, how to run it through ssh, how to log names people enter, and how to play number-guess without installing it. Feel free to send patches and ideas for improvements. Hope you have fun playing my game!
