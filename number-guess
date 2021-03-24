@@ -1,17 +1,18 @@
 #!/bin/bash
+# This is the code file for number-guess, and you can edit as you like.
 clear
 
 # Asks the user for a nickname, and starts the game by asking the user to enter the number
 echo 'Please enter a nickname.'
 read -p '> ' n
 
-# Uncomment the line below to log the nicknames people enter, but only do this after folowing the directions for this on the readme (https://github.com/TheHungrySomeone/Number-Guess/blob/main/README.md).
+# Uncomment the line below to log the nicknames people enter, but only do this AFTER folowing the directions for this on the readme (https://github.com/TheHungrySomeone/Number-Guess/blob/main/README.md).
 #echo $n >> /home/number/names.txt
 
 echo 'Welcome, '$n'.  Please guess a number from 1 to 100.'
 read -p '> ' x
 
-# Chooses a random number so the user doesn't have to edit it manually
+# Chooses a random number so the user doesn't have to edit this file manually
 number=$(echo $(( $RANDOM % 100 + 1 )))
 
 # All of this is for the computer to know if it's too high or too low.  This ends when the user picks the right number.
@@ -40,7 +41,7 @@ fi
 
 done
 
-# This is to end the game, and it asks if the user want's to play again.
+# This is to end the game, and it asks if the user want's to play again.  If the user says no, then it wil simply exit the game, but if they say yes, it will start over this script.
 if [[ $x -eq $number ]]; then
   echo 'YOU WON!!!'
   read -p 'Would you like to to play again? [Y/n]: ' t
