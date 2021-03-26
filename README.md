@@ -18,7 +18,7 @@ cd into the `Number-Guess` directory, then copy `number-guess` into a directory 
 To ssh into the game run the command:\
 `ssh number@hostname`
 
-but replace "hostname" with your computer's ip address (found with `hostname -I`).
+but replace "hostname" with your computer's ip address (found with `hostname -I`, or if you're more advanced, `ifconfig`).
 ## Log the Nicknames People Enter
 If you want the game to automatically log the nicknames people enter, create an empty file named `names.txt` in /home/number, then uncomment the line that says ` echo $n >> /home/number/names.txt`
 ## Play without installing
