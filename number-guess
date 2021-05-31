@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # This is the code file for number-guess, and you can edit as you like.
 clear
 
@@ -50,8 +50,8 @@ if [[ $guess -eq $number ]]; then
 fi
 
 
-if [[ ($playagain == n || $playagain == N) ]]; then
-echo 'Bye, '$name'!  Come back soon!'
+if [[ $playagain == n || $playagain == N ]]; then
+echo "Bye, "$name"!  Come back soon!"
 sleep 0.5s
 exit 0
 fi
