@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # This is the code file for number-guess, and you can edit as you like.
 clear
 
@@ -13,42 +13,54 @@ read -p '> ' name
 
 echo 'Welcome, '$name'.  Please guess a number from 1 to 100.'
 read -p '> ' guess
+declare -i tries
+tries=1
+max=10
 
 # Chooses a random number so the user doesn't have to edit this file manually
+declare -i number
 number=$(echo $(( $RANDOM % 100 + 1 )))
 
 # All of this is for the computer to know if it's too high or too low.  This ends when the user picks the right number.
-while [[ $guess -ne $number ]]
+while [[ $guess -ne $number && $tries -ne $max ]]
 do
 
 if [[ $guess -gt $number  && $guess -le 100 ]]; then
   echo 'Too high.  Try again.'
   read -p '> ' guess
+  tries+=1
 fi
 
 if [[ $guess -lt $number && $guess -ge 1 ]]; then
   echo 'Too low.  Try again.'
   read -p '> ' guess
+  tries+=1
 fi
 
 if [[ $guess -lt 1 ]]; then
   echo 'That is less than 1.  Try again.'
   read -p '> ' guess
+  tries+=1
 fi
 
 if [[ $guess -gt 100 ]]; then
   echo 'That is more than 100.  Try again.'
   read -p '> ' guess
+  tries+=1
 fi
 
 done
 
 # This is to end the game, and it asks if the user want's to play again.  If the user says no, then it wil simply exit the game, but if they say yes, it will start over this script.
 if [[ $guess -eq $number ]]; then
-  echo 'YOU WON!!!'
+  echo 'You won in '$tries' tries!'
   read -p 'Would you like to to play again? [Y/n]: ' playagain
 fi
 
+if [[ $tries == $max ]]; then
+	echo "You lost. You've guessed the maximum amount of times ("$max")."
+	read -p 'Would you like to to play again? [Y/n]: ' playagain
+fi
 
 if [[ $playagain == n || $playagain == N ]]; then
 echo "Bye, "$name"!  Come back soon!"
