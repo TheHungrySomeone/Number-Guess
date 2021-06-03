@@ -1,9 +1,6 @@
 # Number-Guess Game
 A simple number guessing game writen in bash.
 
-## Dependencies
-* Bash
-
 ## How to install
 cd into the `Number-Guess` directory, then run `./install.sh`.
 ### Alternatave
