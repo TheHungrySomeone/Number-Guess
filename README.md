@@ -1,9 +1,12 @@
 # Number-Guess Game
-This is a very simple number guessing game writen in bash.  It asks for a nickname, asks you to guess a number, tells you if you're number is too high or to low, and tells you how many guesses you took. You lose if you take 18 guesses.
+This is a very simple number guessing game writen in bash.  It asks for a nickname, asks you to guess a number, tells you if you're number is too high or too low, and tells you how many guesses you took. You lose if you take 18 guesses.
+
 ## Dependencies
 * Bash
 
 ## How to install
+cd into the `Number-Guess` directory, then run `./install.sh`.
+### Alternatave
 cd into the `Number-Guess` directory, then copy `number-guess` into a directory in your $PATH such as /usr/local/bin or /usr/bin, then you can run this by running the command `number-guess`.
 
 ## Install on an ssh server

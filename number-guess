@@ -15,7 +15,7 @@ echo 'Welcome, '$name'.  Please guess a number from 1 to 100.'
 read -p '> ' guess
 declare -i tries
 tries=1
-max=10
+max=18
 
 # Chooses a random number so the user doesn't have to edit this file manually
 declare -i number
