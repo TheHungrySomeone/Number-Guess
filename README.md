@@ -1,5 +1,5 @@
 # Number-Guess Game
-This is a very simple number guessing game writen in bash.  It asks for a nickname, asks you to guess a number, tells you if you're number is too high or to low, and tells you that you won.
+This is a very simple number guessing game writen in bash.  It asks for a nickname, asks you to guess a number, tells you if you're number is too high or to low, and tells you how many guesses you took. You lose if you take 18 guesses.
 ## Dependencies
 * Bash
 
