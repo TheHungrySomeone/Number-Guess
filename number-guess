@@ -53,8 +53,13 @@ done
 
 # This is to end the game, and it asks if the user want's to play again.  If the user says no, then it wil simply exit the game, but if they say yes, it will start over this script.
 if [[ $guess -eq $number ]]; then
+  if [[ $tries == 1 ]]; then
+  echo 'You won in '$tries' try!'
+  read -p 'Would you like to to play again? [Y/n]: ' playagain
+else
   echo 'You won in '$tries' tries!'
   read -p 'Would you like to to play again? [Y/n]: ' playagain
+  fi
 fi
 
 if [[ $tries == $max ]]; then

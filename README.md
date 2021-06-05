@@ -7,7 +7,10 @@ This is a very simple number guessing game writen in bash.  It asks for a nickna
 ## How to install
 cd into the `Number-Guess` directory, then run `./install.sh`.
 ### Alternatave
-cd into the `Number-Guess` directory, then copy `number-guess` into a directory in your $PATH such as /usr/local/bin or /usr/bin, then you can run this by running the command `number-guess`.
+cd into the `Number-Guess` directory, then copy `number-guess` into /usr/local/bin, then you can run this by running the command `number-guess`.
+
+## Update Number-Guess
+The install script also updates Number-Guess if it is already installed.
 
 ## Install on an ssh server
 1. Follow the directions above
